@@ -1,0 +1,22 @@
+---
+title: "ClimED"
+subtitle: "The Climate and Enteric Diseases Research Project"
+format: html
+editor: visual
+image: logo1.jpg
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/paulcarlos
+    - icon:
+      text: GHP
+      href: https://www.ghp.m.u-tokyo.ac.jp/
+---
+
+## Welcome!
+
+The **Climate and Enteric Diseases Research Project**, or **ClimED**, is an international collaborative research aimed at generating robust scientific evidence on climate change and enteric or diarrheal diseases. ClimED members are scientists and experts from various fields of health and environmental sciences who also provided diarrheal disease data. ClimED features a compilation of reported diarrheal disease cases from various health datasets (i.e., mortality, hospitalization, and surveillance) across multiple countries, coupled with climate-related exposures extracted from open-source datasets available at the subnational level. ClimED researchers employ advanced statistical techniques to disentangle the association between diarrheal diseases and various climate exposures, including ambient temperature, precipitation, tropical cyclones, and flooding. ClimED also aims to support mitigation and adaptation by estimating climate change-related diarrheal disease cases both historically and in the future, based on established socioeconomic and climate scenarios. ClimED is coordinated and managed by Professor Masahiro Hashizume and his team at the Department of Global Health Policy, Graduate School of Medicine, the University of Tokyo.
+
+ClimED is open to new members (i.e., those providing diarrheal data) and research collaborations. For non-members, raw or processed datasets can be requested from each data provider on a project-by-project or study-by-study basis. Please complete the Google form here for data requests or membership inquiries. Alternatively, you may reach out through email at paulchua\@m.u-tokyo.ac.jp or paulcarloschua\@gmail.com.
+
+## 
