@@ -1,0 +1,24 @@
+---
+title: "Data summary"
+editor: visual
+---
+
+Updated on 17 June 2023
+
+## Enteric diseases data
+
+Records of enteric disease cases from 1993 to 2024 from 48 nations, encompassing government vital statistics, surveillance systems, hospital databases, and health insurance data, were provided by ClimED members. A total of 664,501 deaths, 62 million hospital admissions, 103 million hospital visits (outpatient and emergency room departments), 106 million episodes (all health insurance reimbursements), and 185 million surveillance cases were compiled.
+
+```{r}
+library(knitr)
+tab <- read.csv("table_data.csv")
+kable(tab[,1:11])
+```
+
+## Processed exposure-outcome dataset
+
+Description
+
+Subcountry level figures
+
+Time series plots

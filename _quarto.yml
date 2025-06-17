@@ -7,7 +7,12 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: datasum.qmd
+        text: Data summary
+      - href: members.qmd
+        text: Members
+      - href: pubs.qmd
+        text: Publications
 
 format:
   html:
