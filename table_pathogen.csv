@@ -1,0 +1,15 @@
+﻿Type,Pathogen,Countries,Mortality,Hospadm,Hospvisit,Episode,Surveillance
+Bacteria,Campylobacter,35,16,37333,8976,33348,3192953
+Bacteria,Cholera,7,1,1053,13025,5235,32447
+Bacteria,Clostridium difficile,2,12738,99644,44701,0,0
+Bacteria,Escherichia coli,36,59,12354,6457,180484,340873
+Bacteria,Non-typhoidal Salmonella,38,161,107701,6532,220787,2668486
+Bacteria,Paratyphoid,7,0,10538,106,2576,78022
+Bacteria,Shigella,10,8,5945,4560,28716,3953967
+Bacteria,Typhoid,8,7097,340312,1390,7672,199469
+Bacteria,Yersinia,34,4,2151,159,3645,128317
+Protozoa,Cryptosporidium,34,1,956,445,38,283764
+Protozoa,Entamoeba histolytica,8,3077,224477,945,18349,52200
+Protozoa,Giardia,35,1,1648,1524,2580,480769
+Virus,Norovirus,3,0,50926,0,82501,0
+Virus,Rotavirus,7,0,195911,17842,298251,10119

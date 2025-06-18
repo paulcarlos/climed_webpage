@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome!",
+    "section": "",
+    "text": "The Climate and Enteric Diseases Research Project, or ClimED, is an international collaborative research aimed at generating robust scientific evidence on climate change and enteric or diarrheal diseases. ClimED members are scientists and experts from various fields of health and environmental sciences who also provided diarrheal disease data. ClimED features a compilation of reported diarrheal disease cases from various health datasets (i.e., mortality, hospitalization, and surveillance) across multiple countries, coupled with climate-related exposures extracted from open-source datasets available at the subnational level. ClimED researchers employ advanced statistical techniques to disentangle the association between diarrheal diseases and various climate exposures, including ambient temperature, precipitation, tropical cyclones, and flooding. ClimED also aims to support mitigation and adaptation by estimating climate change-related diarrheal disease cases both historically and in the future, based on established socioeconomic and climate scenarios. ClimED is coordinated and managed by Professor Masahiro Hashizume and his team at the Department of Global Health Policy, Graduate School of Medicine, the University of Tokyo.\nClimED is open to new members (i.e., those providing data on diarrheal diseases) and research collaborations. For non-members, raw or processed datasets can be requested from each data provider on a project-by-project or study-by-study basis. Studies beyond climate change are also welcome. Please complete the Google form here for data requests or membership inquiries. Alternatively, you may reach out to us via email at paulchua@m.u-tokyo.ac.jp or paulcarloschua@gmail.com."
+  },
+  {
+    "objectID": "datasum.html",
+    "href": "datasum.html",
+    "title": "Data summary",
+    "section": "",
+    "text": "Updated on 17 June 2023"
+  },
+  {
+    "objectID": "datasum.html#enteric-diseases-data",
+    "href": "datasum.html#enteric-diseases-data",
+    "title": "Data summary",
+    "section": "Enteric diseases data",
+    "text": "Enteric diseases data\nRecords of enteric disease cases from 1993 to 2024 from 48 nations, encompassing government vital statistics, surveillance systems, hospital databases, and health insurance data, were provided by ClimED members. A total of 664,501 deaths, 62 million hospital admissions, 103 million hospital visits (outpatient and emergency room departments), 106 million episodes (all health insurance reimbursements), and 185 million surveillance cases were compiled."
+  },
+  {
+    "objectID": "datasum.html#processed-exposure-outcome-dataset",
+    "href": "datasum.html#processed-exposure-outcome-dataset",
+    "title": "Data summary",
+    "section": "Processed exposure-outcome dataset",
+    "text": "Processed exposure-outcome dataset\nDescription\nSubcountry level figures\nTime series plots"
+  },
+  {
+    "objectID": "members.html",
+    "href": "members.html",
+    "title": "Members",
+    "section": "",
+    "text": "Table of members"
+  },
+  {
+    "objectID": "pubs.html",
+    "href": "pubs.html",
+    "title": "Publications",
+    "section": "",
+    "text": "List of publications"
+  }
+]

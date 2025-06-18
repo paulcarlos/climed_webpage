@@ -1,4 +1,4 @@
-﻿Country of affiliation,Name,Email Address,Main Affiliation,Data location,Outcome
+﻿Country of affiliation,Name,Email Address,Main Affiliation,Country Data,Outcome
 Argentina,Rosana Abrutzky,rabrutzky@gmail.com,Universidad de Buenos Aires,Argentina,Mortality
 Australia,Dung Phung,d.phung@uq.edu.au,The University of Queensland,Vietnam,Hospital admission
 Bangladesh,Abu Syed Golam Faruque,gfaruque@icddrb.org,"International Centre for Diarrhoeal Disease Research, Bangladesh",Bangladesh,Hospital visit
@@ -8,19 +8,20 @@ Canada,Patrick Brown,patrick.brown@utoronto.ca,University of Toronto,India,Morta
 Canada,Eric Lavigne,eric.lavigne@hc-sc.gc.ca,Health Canada,Canada,"Mortality, hospital admission, emergency room visits"
 China,Cunrui Huang,huangcunrui@mail.tsinghua.edu.cn,Tsinghua University,China,Surveillance
 Japan,Masahiro Hashizume,hashizume@m.u-tokyo.ac.jp,The University of Tokyo,Japan,Surveillance
+Japan,Lina Madaniyazi,lina.madaniyazi@nagasaki-u.ac.jp,Nagasaki University,Japan,Surveillance
 Japan,Paul LC Chua,paulchua@m.u-tokyo.ac.jp,The University of Tokyo,Philippines,Mortality
 Japan,Chris Fook Sheng Ng,chrisng@m.u-tokyo.ac.jp,The University of Tokyo,Malaysia,Mortality
-Japan,Vera Ling Hui Phung,veraphung@gmail.com,National Institutes of Environmental Studies,Malaysia,Mortality
+Japan,Vera Ling Hui Phung,veraphung@m.u-tokyo.ac.jp,The University of Tokyo,Malaysia,Mortality
 Japan,Yoonhee Kim,yoonheekim@m.u-tokyo.ac.jp,The University of Tokyo,South Korea,"Episodes, hospital admission"
-New Zealand,Simon Hales,haknabus@gmail.com ,University of Otago,New Zealand,"Hospital admission, surveillance"
+New Zealand,Simon Hales,simon.hales@otago.ac.nz,University of Otago,New Zealand,"Hospital admission, surveillance"
 Peru,Gabriel Carrasco Escobar,gabriel.carrasco@upch.pe,Universidad Peruana Cayetano Heredia,Peru,Mortality
 Philippines,Miguel Antonio Salazar,mikesalazar@gmail.com ,"Alliance for Improving Health Outcomes, Inc.",Philippines,Hospital admission
 Spain,Dominic Royé,dominic.roye@ficlima.org,Foundation for Climate Research,Ecuador,Mortality
 Spain,Dominic Royé,dominic.roye@ficlima.org,Foundation for Climate Research,Costa Rica,Mortality
+Spain,Aurelio Tobias,aurelio.tobias@idaea.csic.es,Spanish Council for Scientific Research,Mexico,Surveillance
 Sweden,Jan Semenza,Jan.Semenza@lateralphc.com ,Umeå University,European Union,Surveillance
 Taiwan,Chau-Ren Jung,crjung@cmu.edu.tw,China Medical University,Taiwan,"Hospital admission, outpatient visits, surveillance"
 Thailand,Kraichat Tantrakarnapa,kraichat.tan@gmail.com,Mahidol University,Thailand,"Mortality, hospital admission, outpatient visits"
 Thailand,Wissanupong Kliengchuay,wissanupong.k@gmail.com,Mahidol University,Thailand,"Mortality, hospital admission, outpatient visits"
-United States of America,Nasif Hossain,nasif.stat.iu@gmail.com,,Mexico,Surveillance
 United States of America,Noah Scovronick,scovronick@emory.edu ,Emory University,South Africa,Mortality
 United States of America,Victoria Lynch,vdl2103@cumc.columbia.edu ,Columbia University,United States of America,Surveillance

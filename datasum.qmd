@@ -1,24 +1,77 @@
 ---
 title: "Data summary"
 editor: visual
+format:
+  html:
+    echo: false
 ---
 
-Updated on 17 June 2023
+Updated on [**17 June 2023**]{.underline}
 
 ## Enteric diseases data
 
-Records of enteric disease cases from 1993 to 2024 from 48 nations, encompassing government vital statistics, surveillance systems, hospital databases, and health insurance data, were provided by ClimED members. A total of 664,501 deaths, 62 million hospital admissions, 103 million hospital visits (outpatient and emergency room departments), 106 million episodes (all health insurance reimbursements), and 185 million surveillance cases were compiled.
+Records of enteric disease cases from 1993 to 2024 from 48 nations, encompassing government vital statistics, surveillance systems, hospital databases, and health insurance data, were provided by ClimED members. A total of 664,501 deaths, 62 million hospital admissions, 103 million hospital visits (outpatient and emergency room departments), 106 million episodes (all health insurance reimbursements), and 185 million surveillance cases were compiled. The following table lists the details of the compiled raw data:
 
 ```{r}
-library(knitr)
-tab <- read.csv("table_data.csv")
-kable(tab[,1:11])
+library(reactable)
+tab1 <- read.csv("table_data.csv")
+reactable(
+  tab1[,c("Region","Country","Type","Total","Start_year","End_year","Temporal","Subnational_level",
+         "Age","Sex","Pathogens","database.source")],
+  resizable = TRUE,
+  sortable = TRUE,
+  wrap = FALSE,
+  pagination = FALSE,
+  columns = list(
+    Country = colDef(name = "Nation"),
+    Type = colDef(name = "Health Outcome"),
+    Total = colDef(name = "Total Cases"),
+    Start_year = colDef(name = "Start Year"),
+    End_year = colDef(name = "End Year"),
+    Temporal = colDef(name = "Temporal Resolution"),
+    Subnational_level = colDef(name = "Smallest Subnational Level"),
+    Age = colDef(name = "Age Info"),
+    Sex = colDef(name = "Sex Info"),
+    Pathogens = colDef(name = "Pathogen-Specific Info"),
+    database.source = colDef(name = "Source")
+    ),
+  outlined = TRUE,
+  striped = TRUE,
+  elementId = "tbl"
+  )
+```
+
+Some enteric disease data are pathogen-specific, especially from surveillance systems in high-income countries. Some pathogens were derived from ICD 10 codes A00 to A09. The major pathogens included in the compiled dataset are:
+
+```{r}
+library(reactable)
+tab2 <- read.csv("table_pathogen.csv")
+reactable(
+  tab2,
+  resizable = TRUE,
+  sortable = TRUE,
+  wrap = FALSE,
+  pagination = FALSE,
+  columns = list(
+    Countries = colDef(name = "Number of Nations"),
+    Mortality = colDef(name = "Deaths"),
+    Hospadm = colDef(name = "Hospital Admissions"),
+    Hospvisit = colDef(name = "Hospital Visits"),
+    Episode = colDef(name = "Episodes"),
+    Surveillance = colDef(name = "Surveillance Cases")
+    ),
+  outlined = TRUE,
+  striped = TRUE,
+  elementId = "tbl"
+  )
 ```
 
 ## Processed exposure-outcome dataset
 
-Description
+The raw enteric diseases data were processed into weekly time series at the most appropriate subnational administrative level (i.e., aggregation at higher subnational level were done whenever number of cases are too few). The weekly format were mostly in ISO weeks and some countries were in EPI week to follow a consistent 7-day aggregation with the year value following the ISO and EPI week formats. Figures 1, 2, and 3 are sample plots of spatial and temporal resolution of the processed enteric disease dataset.
 
 Subcountry level figures
 
 Time series plots
+
+Climate-related exposures were extracted from open source datasets using bespoke R functions to fit the temporal and spatial resolution of the enteric diseases data (i.e., considering local time zones). Initial climate-related exposures included 2-meter temperature (°C) and total precipitation (mm) collected from ERA5 (i.e., Fifth generation re-analysis data by European Centre for Medium-Range Weather Forecasts) and ERA5-Land (via [Climate Data Store](https://cds.climate.copernicus.eu/)), as well as sustained maximum wind speed (m/s) and total rainfall (mm) due to tropical cyclones collected from ISIMIP3a (via [ISIMIP Repository](https://data.isimip.org/)). Population density from GPWv411 (Gridded Population of the World Version 4.11) and climate zone categorization from [Beck et al. (2023)](https://www.nature.com/articles/s41597-023-02549-6) were extracted for each subnational level. All R and Python codes are available [here](https://github.com/paulcarlos/climed_codes).
