@@ -18,21 +18,21 @@
     "href": "datasum.html#enteric-diseases-data",
     "title": "Data summary",
     "section": "Enteric diseases data",
-    "text": "Enteric diseases data\nRecords of enteric disease cases from 1993 to 2024 from 48 nations, encompassing government vital statistics, surveillance systems, hospital databases, and health insurance data, were provided by ClimED members. A total of 664,501 deaths, 62 million hospital admissions, 103 million hospital visits (outpatient and emergency room departments), 106 million episodes (all health insurance reimbursements), and 185 million surveillance cases were compiled."
+    "text": "Enteric diseases data\nRecords of enteric disease cases from 1993 to 2024 from 48 nations, encompassing government vital statistics, surveillance systems, hospital databases, and health insurance data, were provided by ClimED members. A total of 664,501 deaths, 62 million hospital admissions, 103 million hospital visits (outpatient and emergency room departments), 106 million episodes (all health insurance reimbursements), and 185 million surveillance cases were compiled. Table 1 lists the details of the compiled raw data.\n\n\n\n\nTable 1: Details of raw enteric diseases dataset\n\n\n\n\n\n\n\n\n\n\nSome enteric disease data are pathogen-specific, especially from surveillance systems in high-income countries. Some pathogens were derived from ICD 10 codes A00 to A09. The major pathogens included in the compiled dataset are shown in Table 2.\n\n\n\n\nTable 2: Pathogen-specific information"
   },
   {
     "objectID": "datasum.html#processed-exposure-outcome-dataset",
     "href": "datasum.html#processed-exposure-outcome-dataset",
     "title": "Data summary",
     "section": "Processed exposure-outcome dataset",
-    "text": "Processed exposure-outcome dataset\nDescription\nSubcountry level figures\nTime series plots"
+    "text": "Processed exposure-outcome dataset\nThe raw enteric diseases data were processed into weekly time series at the most appropriate subnational administrative level (i.e., aggregation at higher subnational level were done whenever number of cases are too few). The weekly format were mostly in ISO weeks and some countries were in EPI week to follow a consistent 7-day aggregation with the year value following the ISO and EPI week formats. Figure 1, Figure 2, and Figure 3 are sample plots of spatial and temporal resolution of the processed enteric disease dataset.\n\n\n\n\n\n\nFigure 1: Total all-cause enteric disease cases by subnational units of East Asian nations. Number of cases are shown in quartiles by nation because each system varies and numbers of cases are very high in South Korea.\n\n\n\n\n\n\n\n\n\nFigure 2: Total Campylobacter cases by subnational units of some European countries. Country-level reports from Spain, France, Norway, and others are excluded.\n\n\n\n\n\n\n\n\n\nFigure 3: Weekly cases of mortality and hospital admissions in Metro Manila, Philippines\n\n\n\nClimate-related exposures were extracted from open source datasets using bespoke R functions to fit the temporal and spatial resolution of the enteric diseases data (i.e., considering local time zones). Initial climate-related exposures included 2-meter temperature (°C) and total precipitation (mm) collected from ERA5 (i.e., Fifth generation re-analysis data by European Centre for Medium-Range Weather Forecasts) and ERA5-Land (via Climate Data Store), as well as sustained maximum wind speed (m/s) and total rainfall (mm) due to tropical cyclones collected from ISIMIP3a (via ISIMIP Repository). Population density from GPWv411 (Gridded Population of the World Version 4.11) and climate zone categorization from Beck et al. (2023) were extracted for each subnational level. All R and Python codes are available here. Figure 4 and Figure 5 are sample plots of climate-related variables extracted.\n\n\n\n\n\n\nFigure 4: Weekly temperature and rainfall in Metro Manila, Philippines. Blue bars are rainfall and red lines are temperature.\n\n\n\n\n\n\n\n\n\nFigure 5: Weekly tropical cylone maximum winds and total rainfall in Metro Manila, Philippines. Red circles are wind speeds and blue bars are total rainfall."
   },
   {
     "objectID": "members.html",
     "href": "members.html",
     "title": "Members",
     "section": "",
-    "text": "Table of members"
+    "text": "library(reactable)\ntab3 &lt;- read.csv(\"table_members.csv\")\nreactable(\n  tab3,\n  resizable = TRUE,\n  sortable = TRUE,\n  wrap = FALSE,\n  pagination = FALSE,\n  columns = list(\n    Country = colDef(name = \"Nation\"),\n    Email = colDef(name = \"Email Address\"),\n    Data = colDef(name = \"Data Provided\"),\n    Outcome = colDef(name = \"Type of Outcome\")\n    ),\n  outlined = TRUE,\n  striped = TRUE\n          )\n\n\n\nTable 1: List of ClimED members"
   },
   {
     "objectID": "pubs.html",

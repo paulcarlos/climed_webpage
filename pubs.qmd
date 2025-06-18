@@ -1,6 +1,9 @@
 ---
 title: "Publications"
 editor: visual
+format:
+  html:
+    echo: false
 ---
 
 List of publications

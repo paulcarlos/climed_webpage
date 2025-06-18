@@ -1,6 +1,30 @@
 ---
 title: "Members"
 editor: visual
+format:
+  html:
+    echo: false
 ---
 
-Table of members
+```{r}
+#| label: tbl-members
+#| tbl-cap: "List of ClimED members"
+
+library(reactable)
+tab3 <- read.csv("table_members.csv")
+reactable(
+  tab3,
+  resizable = TRUE,
+  sortable = TRUE,
+  wrap = FALSE,
+  pagination = FALSE,
+  columns = list(
+    Country = colDef(name = "Nation"),
+    Email = colDef(name = "Email Address"),
+    Data = colDef(name = "Data Provided"),
+    Outcome = colDef(name = "Type of Outcome")
+    ),
+  outlined = TRUE,
+  striped = TRUE
+          )
+```

@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -66,6 +100,22 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
+
+<script src="site_libs/reactwidget-2.0.0/react-tools.js"></script>
+
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+
+<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -140,7 +190,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Table of members</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reactable)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>tab3 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"table_members.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">reactable</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  tab3,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">resizable =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">sortable =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">wrap =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">pagination =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">columns =</span> <span class="fu">list</span>(</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">Country =</span> <span class="fu">colDef</span>(<span class="at">name =</span> <span class="st">"Nation"</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">Email =</span> <span class="fu">colDef</span>(<span class="at">name =</span> <span class="st">"Email Address"</span>),</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">Data =</span> <span class="fu">colDef</span>(<span class="at">name =</span> <span class="st">"Data Provided"</span>),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">Outcome =</span> <span class="fu">colDef</span>(<span class="at">name =</span> <span class="st">"Type of Outcome"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">outlined =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">striped =</span> <span class="cn">TRUE</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>          )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tbl-members" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-members-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: List of ClimED members
+</figcaption>
+<div aria-describedby="tbl-members-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-366fd451f78a1aba7708" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-366fd451f78a1aba7708">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Country":["Argentina","Australia","Bangladesh","Brazil","Brazil","Canada","Canada","China","Japan","Japan","Japan","Japan","Japan","Japan","New Zealand","Peru","Philippines","Spain","Spain","Spain","Sweden","Taiwan","Thailand","Thailand","United States of America","United States of America"],"Name":["Rosana Abrutzky","Dung Phung","Abu Syed Golam Faruque","Micheline de Sousa Zanotti Stagliorio Coêlho","Paulo Hilario Nascimento Saldiva","Patrick Brown","Eric Lavigne","Cunrui Huang","Masahiro Hashizume","Lina Madaniyazi","Paul LC Chua","Chris Fook Sheng Ng","Vera Ling Hui Phung","Yoonhee Kim","Simon Hales","Gabriel Carrasco Escobar","Miguel Antonio Salazar","Dominic Royé","Dominic Royé","Aurelio Tobias","Jan Semenza","Chau-Ren Jung","Kraichat Tantrakarnapa","Wissanupong Kliengchuay","Noah Scovronick","Victoria Lynch"],"Email":["rabrutzky@gmail.com","d.phung@uq.edu.au","gfaruque@icddrb.org","coelhomicheline@gmail.com","pepino@usp.br","patrick.brown@utoronto.ca","eric.lavigne@hc-sc.gc.ca","huangcunrui@mail.tsinghua.edu.cn","hashizume@m.u-tokyo.ac.jp","lina.madaniyazi@nagasaki-u.ac.jp","paulchua@m.u-tokyo.ac.jp","chrisng@m.u-tokyo.ac.jp","veraphung@m.u-tokyo.ac.jp","yoonheekim@m.u-tokyo.ac.jp","simon.hales@otago.ac.nz","gabriel.carrasco@upch.pe","mikesalazar@gmail.com ","dominic.roye@ficlima.org","dominic.roye@ficlima.org","aurelio.tobias@idaea.csic.es","Jan.Semenza@lateralphc.com ","crjung@cmu.edu.tw","kraichat.tan@gmail.com","wissanupong.k@gmail.com","scovronick@emory.edu ","vdl2103@cumc.columbia.edu "],"Affiliation":["Universidad de Buenos Aires","The University of Queensland","International Centre for Diarrhoeal Disease Research, Bangladesh","University of São Paulo","University of São Paulo","University of Toronto","Health Canada","Tsinghua University","The University of Tokyo","Nagasaki University","The University of Tokyo","The University of Tokyo","The University of Tokyo","The University of Tokyo","University of Otago","Universidad Peruana Cayetano Heredia","Alliance for Improving Health Outcomes, Inc.","Foundation for Climate Research","Foundation for Climate Research","Spanish Council for Scientific Research","Umeå University","China Medical University","Mahidol University","Mahidol University","Emory University","Columbia University"],"Data":["Argentina","Vietnam","Bangladesh","Brazil","Brazil","India","Canada","China","Japan","Japan","Philippines","Malaysia","Malaysia","South Korea","New Zealand","Peru","Philippines","Ecuador","Costa Rica","Mexico","European Union","Taiwan","Thailand","Thailand","South Africa","United States of America"],"Outcome":["Mortality","Hospital admission","Hospital visit","Mortality, clinic visits","Mortality, clinic visits","Mortality","Mortality, hospital admission, emergency room visits","Surveillance","Surveillance","Surveillance","Mortality","Mortality","Mortality","Episodes, hospital admission","Hospital admission, surveillance","Mortality","Hospital admission","Mortality","Mortality","Surveillance","Surveillance","Hospital admission, outpatient visits, surveillance","Mortality, hospital admission, outpatient visits","Mortality, hospital admission, outpatient visits","Mortality","Surveillance"]},"columns":[{"id":"Country","name":"Nation","type":"character"},{"id":"Name","name":"Name","type":"character"},{"id":"Email","name":"Email Address","type":"character"},{"id":"Affiliation","name":"Affiliation","type":"character"},{"id":"Data","name":"Data Provided","type":"character"},{"id":"Outcome","name":"Type of Outcome","type":"character"}],"resizable":true,"pagination":false,"outlined":true,"striped":true,"nowrap":true,"dataKey":"511e0a1f7fdf67e7063db1e129041580"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</figure>
+</div>
+</div>
 
 
 
