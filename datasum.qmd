@@ -43,7 +43,7 @@ reactable(
   )
 ```
 
-Some enteric disease data are pathogen-specific, especially from surveillance systems in high-income countries. Some pathogens were derived from ICD 10 codes A00 to A09. The major pathogens included in the compiled dataset are shown in @tbl-pathogen.
+Some enteric disease data are pathogen-specific, especially from surveillance systems in high-income countries. Some pathogens were derived from ICD-10 codes as the cause of hospital visit or admission. The major pathogens included in the compiled dataset are shown in @tbl-pathogen.
 
 ```{r}
 #| label: tbl-pathogen
@@ -72,16 +72,16 @@ reactable(
 
 ## Processed exposure-outcome dataset
 
-The raw enteric diseases data were processed into weekly time series at the most appropriate subnational administrative level (i.e., aggregation at higher subnational level were done whenever number of cases are too few). The weekly format were mostly in ISO weeks and some countries were in EPI week to follow a consistent 7-day aggregation with the year value following the ISO and EPI week formats. @fig-easia, @fig-europe, and @fig-mnl1 are sample plots of spatial and temporal resolution of the processed enteric disease dataset.
+The raw enteric diseases data were processed into weekly time series at the most appropriate subnational administrative level (i.e., aggregation at a higher subnational level was done whenever the number of cases was too few). The weekly format was primarily based on ISO weeks, while some countries used EPI weeks to maintain a consistent 7-day aggregation, with the year value aligning with either the ISO or EPI week formats. @fig-easia, @fig-europe, and @fig-mnl1 are sample plots of the spatial and temporal resolution of the processed enteric disease dataset.
 
-![Total all-cause enteric disease cases by subnational units of East Asian nations. Number of cases are shown in quartiles by nation because each system varies and numbers of cases are very high in South Korea.](climed_website_fig1.png){#fig-easia width="700"}
+![Total all-cause enteric disease cases by subnational units of East Asian nations. The number of cases is presented in quartiles by nation, as each system varies, and the number of cases is particularly high in South Korea due to the extensive coverage of their National Health Insurance Service. 1Q has the least number of cases, and 4Q has the highest number of cases.](climed_website_fig1.png){#fig-easia width="700"}
 
-![Total Campylobacter cases by subnational units of some European countries. Country-level reports from Spain, France, Norway, and others are excluded.](climed_website_fig2.png){#fig-europe width="700"}
+![Total Campylobacter cases by subnational units of some European countries. Reports without subnational level information from Spain, France, Norway, and others are excluded from this figure.](climed_website_fig2.png){#fig-europe width="700"}
 
 ![Weekly cases of mortality and hospital admissions in Metro Manila, Philippines](climed_website_fig3.png){#fig-mnl1 width="700"}
 
-Climate-related exposures were extracted from open source datasets using bespoke R functions to fit the temporal and spatial resolution of the enteric diseases data (i.e., considering local time zones). Initial climate-related exposures included 2-meter temperature (°C) and total precipitation (mm) collected from ERA5 (i.e., Fifth generation re-analysis data by European Centre for Medium-Range Weather Forecasts) and ERA5-Land (via [Climate Data Store](https://cds.climate.copernicus.eu/)), as well as sustained maximum wind speed (m/s) and total rainfall (mm) due to tropical cyclones collected from ISIMIP3a (via [ISIMIP Repository](https://data.isimip.org/)). Population density from GPWv411 (Gridded Population of the World Version 4.11) and climate zone categorization from [Beck et al. (2023)](https://www.nature.com/articles/s41597-023-02549-6) were extracted for each subnational level. All R and Python codes are available [here](https://github.com/paulcarlos/climed_codes). @fig-mnl2 and @fig-mnl3 are sample plots of climate-related variables extracted.
+Climate-related exposures were extracted from open-source datasets using bespoke R functions to fit the temporal and spatial resolution of the enteric diseases data (i.e., considering local time zones). Initial climate-related exposures included 2-meter temperature (°C) and total precipitation (mm) collected from ERA5 (i.e., Fifth generation re-analysis data by European Centre for Medium-Range Weather Forecasts) and ERA5-Land (via [Climate Data Store](https://cds.climate.copernicus.eu/)), as well as sustained maximum wind speed (m/s) and total rainfall (mm) due to tropical cyclones collected from ISIMIP3a (via [ISIMIP Repository](https://data.isimip.org/)). Two wind field models (i.e., Holland, 2008 and Emanuel & Rotunno, 2011) for tropical cyclone data are available ([Frieler et al., 2024](https://gmd.copernicus.org/articles/17/1/2024/)). Population density from GPWv411 (Gridded Population of the World Version 4.11) and climate zone categorization from [Beck et al. (2023)](https://www.nature.com/articles/s41597-023-02549-6) were extracted for each subnational level. All R and Python codes are available [here](https://github.com/paulcarlos/climed_codes). @fig-mnl2 and @fig-mnl3 are sample plots of climate-related variables extracted.
 
 ![Weekly temperature and rainfall in Metro Manila, Philippines. Blue bars are rainfall and red lines are temperature.](climed_website_fig4.png){#fig-mnl2 width="800"}
 
-![Weekly tropical cylone maximum winds and total rainfall in Metro Manila, Philippines. Red circles are wind speeds and blue bars are total rainfall.](climed_website_fig5.png){#fig-mnl3 width="800"}
+![Weekly tropical cyclone maximum winds and total rainfall in Metro Manila, Philippines. Red circles are wind speeds, and blue bars are total rainfall.](climed_website_fig5.png){#fig-mnl3 width="800"}
