@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 75acfe2c-0b78-4935-9e25-e40652e3a068
+      url: https://paulcarlos.quarto.pub/climed
