@@ -1,9 +1,6 @@
 ---
 title: "Publications"
-editor: visual
-format:
-  html:
-    echo: false
+listing:
+  contents: articles.yml
+  type: table
 ---
-
-List of publications

@@ -32,13 +32,13 @@
     "href": "members.html",
     "title": "Members",
     "section": "",
-    "text": "library(reactable)\ntab3 &lt;- read.csv(\"table_members.csv\")\nreactable(\n  tab3,\n  resizable = TRUE,\n  sortable = TRUE,\n  wrap = FALSE,\n  pagination = FALSE,\n  columns = list(\n    Country = colDef(name = \"Nation\"),\n    Email = colDef(name = \"Email Address\"),\n    Data = colDef(name = \"Data Provided\"),\n    Outcome = colDef(name = \"Type of Outcome\")\n    ),\n  outlined = TRUE,\n  striped = TRUE\n          )\n\n\n\nTable 1: List of ClimED members"
+    "text": "Table 1: List of ClimED members"
   },
   {
     "objectID": "pubs.html",
     "href": "pubs.html",
     "title": "Publications",
     "section": "",
-    "text": "List of publications"
+    "text": "Order By\n       Default\n         \n          Year\n        \n         \n          Title\n        \n         \n          Authors\n        \n         \n          Journal\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nYear\n\n\nTitle\n\n\nAuthors\n\n\nJournal\n\n\n\n\n\n\n2021\n\n\nGlobal projections of temperature-attributable mortality due to enteric infections: a modelling study\n\n\nChua PL, Huber V, Ng CF, Seposo XT, Madaniyazi L, Hales S, Woodward A, Hashizume M\n\n\nLancet Planetary Health\n\n\n\n\n2021\n\n\nAssociation between Ambient Temperature and Severe Diarrhoea in the National Capital Region, Philippines\n\n\nChua PL, Ng CF, Rivera AS, Salva EP, Salazar MA, Huber V, Hashizume M\n\n\nInternational Journal of Environmental Research and Public Health\n\n\n\n\n2022\n\n\nProjecting Temperature-Attributable Mortality and Hospital Admissions due to Enteric Infections in the Philippines\n\n\nChua PL, Ng CF, Madaniyazi L, Seposo X, Salazar MA, Huber V, Hashizume M\n\n\nEnvironmental Health Perspectives\n\n\n\n\n2022\n\n\nAssociations between ambient temperature and enteric infections by pathogen: a systematic review and meta-analysis\n\n\nChua PL, Ng CF, Tobias A, Seposo XT, Hashizume M\n\n\nLancet Planetary Health\n\n\n\n\n2024\n\n\nAssociation between precipitation and mortality due to diarrheal diseases by climate zone: A multi-country modeling study\n\n\nChua PL, Tobias A, Madaniyazi L, Ng CF, Phung VL, Fu SH, et al.\n\n\nEnvironmental Epidemiology\n\n\n\n\n2025\n\n\nA scoping review and thematic analysis of the effects of tropical cyclones on diarrheal diseases\n\n\nLin SY, Chua PL, Yuan L, Hossain N, He J, Yamasaki L, Madaniyazi L, Ng CF, Tobias A, Hashizume M\n\n\nEnvironmental Epidemiology\n\n\n\n\n\nNo matching items"
   }
 ]
