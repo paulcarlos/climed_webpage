@@ -1,1 +1,1 @@
-Sitemap: https://75acfe2c-0b78-4935-9e25-e40652e3a068.netlify.app/sitemap.xml
+Sitemap: https://paulcarlos.quarto.pub/climed/sitemap.xml
