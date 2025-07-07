@@ -19,9 +19,7 @@ reactable(
   wrap = FALSE,
   pagination = FALSE,
   columns = list(
-    Country = colDef(name = "Nation"),
-    Email = colDef(name = "Email Address"),
-    Data = colDef(name = "Data Provided"),
+    Country = colDef(name = "Country Data"),
     Outcome = colDef(name = "Type of Outcome")
     ),
   outlined = TRUE,
